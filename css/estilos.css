@@ -1,0 +1,31 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e5e5e5;
+}
+
+.topo {
+    height: 92px;
+    width: 100%;
+    background-color: #CF2B2B;
+    padding: 8px 0 0 21px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.conteudo {
+    padding: 123px 0 0 19px;
+    height: 1000px;
+}
+
+.rodape {
+    height: 92px;
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
