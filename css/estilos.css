@@ -4,21 +4,38 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #e5e5e5;
+    font-size: 18px;
+}
+
+h1 {
+    font-family: 'Righteous', cursive;
 }
 
 .topo {
     height: 92px;
     width: 100%;
     background-color: #CF2B2B;
-    padding: 8px 0 0 21px;
+    padding: 13px 0 0 21px;
     position: fixed;
     top: 0;
     left: 0;
+    color: #ffffff;
+}
+
+.topo h1 {
+    font-size: 44px;
+    letter-spacing: -1.2%;
 }
 
 .conteudo {
     padding: 123px 0 0 19px;
     height: 1000px;
+}
+
+.conteudo h1 {
+    font-size: 26px;
+    color: #333333;
+    letter-spacing: 1.8%;
 }
 
 .rodape {
