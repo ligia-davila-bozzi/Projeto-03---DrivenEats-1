@@ -28,14 +28,66 @@ h1 {
 }
 
 .conteudo {
-    padding: 123px 0 0 19px;
-    height: 1000px;
+    padding: 123px 0 108px;
 }
 
 .conteudo h1 {
     font-size: 26px;
     color: #333333;
     letter-spacing: 1.8%;
+    margin-left: 19px;
+}
+
+.caixa-opcoes {
+    height: 260px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    overflow-x: scroll;
+    padding: 17px 0 27px 19px;
+}
+
+.opcao {
+    height: 216px;
+    width: 172px;
+    background-color: #ffffff;
+    padding: 18px 14px 15px;
+    margin-right: 16px;
+    border-radius: 9px;
+    box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25);
+}
+
+.opcao img {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.opcao-texto {
+    height: 88px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.opcao h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.descricao {
+    font-size: 15px;
+    font-weight: 300;
+    color: #a6a6a6;
+    line-height: 18px;
+}
+
+.preco {
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .rodape {
