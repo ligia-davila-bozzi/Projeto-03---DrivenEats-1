@@ -88,15 +88,19 @@ function selecionarSobremesa(opcao) {
 
 function enviarMensagem() {
     const preco = prato_preco + bebida_preco + sobremesa_preco;
+    const nome = prompt("Digite seu nome:");
+    const endereco = prompt("Digite seu endereço:");
 
     const numero = "5512996421592";
     const pedido = "Olá, gostaria de fazer o pedido:\n";
     const prato = "- Prato: " + prato_nome;
     const bebida = "\n- Bebida: " + bebida_nome;
     const sobremesa = "\n- Sobremesa: " + sobremesa_nome;
-    const total = "\nTotal: R$ " + preco;
+    const total = "\nTotal: R$ " + preco.toFixed(2);
+    const nome_mensagem = "\n\nNome: " + nome;
+    const endereco_mensagem = "\nEndereço: " + endereco;
 
-    const mensagem = pedido + prato + bebida + sobremesa + total;
+    const mensagem = pedido + prato + bebida + sobremesa + total + nome_mensagem + endereco_mensagem;
 
     open("https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem));
 }
