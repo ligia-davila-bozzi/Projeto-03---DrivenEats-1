@@ -21,6 +21,7 @@ h1 {
     left: 0;
     color: #ffffff;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
 }
 
 .topo h1 {
@@ -56,6 +57,7 @@ h1 {
     margin-right: 16px;
     border-radius: 9px;
     box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25);
+    position: relative;
 }
 
 .opcao img {
@@ -72,7 +74,7 @@ h1 {
     justify-content: space-between;
 }
 
-.opcao h2 {
+.nome {
     font-size: 16px;
     font-weight: 700;
     color: #333333;
@@ -86,13 +88,21 @@ h1 {
     line-height: 18px;
 }
 
-.preco {
+.valor {
     font-size: 16px;
     font-weight: 400;
 }
 
 .selecionado {
-    border: 5px solid #32b72f;
+    box-shadow: inset 0 0 0 5px #32b72f;
+}
+
+.check {
+    font-size: 15px;
+    position: absolute;
+    right: 13px;
+    bottom: 16px;
+    color: #32b72f;
 }
 
 .rodape {
@@ -117,11 +127,17 @@ h1 {
     font-size: 20px;
     line-height: 23px;
     letter-spacing: 1.8%;
+    z-index: 1;
+}
+
+.oculto {
+    display: none;
 }
 
 .desabilitado {
     background-color: #cbcbcb;
     font-weight: 400;
+    cursor: not-allowed;
 }
 
 .habilitado {
