@@ -144,3 +144,84 @@ h1 {
     background-color: #32b72f;
     font-weight: 700;
 }
+
+.confirmacao {
+    background-color: rgba(255, 255, 255 , 0.9);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.caixa-confirmacao {
+    background-color: #50d074;
+    width: calc(100% - 36px);
+    height: 330px;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    padding: 21px 25px 0;
+    position: absolute;
+    top: calc(50% - 330px/2);
+    left: 18px;
+}
+
+.caixa-confirmacao .nome, .caixa-confirmacao .preco {
+    font-size: 22px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 0;
+    letter-spacing: 1.8%;
+}
+
+.caixa-confirmacao h2 {
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 28px;
+}
+
+.linha-confirmacao {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+
+.total {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.total .preco {
+    font-weight: 700;
+    
+}
+
+.fechar-pedido {
+    width: 100%;
+    height: 52px;
+    background-color: #ffffff;
+    color: #50d074;
+    font-weight: 700;
+    border: none;
+    font-size: 22px;
+    border-radius: 100px;
+    margin-top: 11px;
+}
+
+.cancelar {
+    width: 100%;
+    height: 52px;
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: 700;
+    border: none;
+    font-size: 20px;
+}
+
+.travado {
+    overflow: hidden;
+}

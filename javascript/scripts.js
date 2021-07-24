@@ -7,6 +7,8 @@ let bebida_preco;
 let sobremesa_nome;
 let sobremesa_preco;
 
+let preco_total;
+
 function atualizarBotao() {
     const botao_desabilitado = document.querySelector(".desabilitado");
     const botao_habilitado = document.querySelector(".habilitado");
@@ -37,6 +39,12 @@ function selecionarPrato(opcao) {
     prato_nome = nome.innerHTML;
     prato_preco = Number(preco.innerHTML);
 
+    const nome_confirmacao = document.querySelector(".confirmacao .pratos .nome");
+    const preco_confirmacao = document.querySelector(".confirmacao .pratos .preco");
+
+    nome_confirmacao.innerHTML = prato_nome;
+    preco_confirmacao.innerHTML = prato_preco.toFixed(2);
+
     atualizarBotao();
 }
 
@@ -59,6 +67,12 @@ function selecionarBebida(opcao) {
 
     bebida_nome = nome.innerHTML;
     bebida_preco = Number(preco.innerHTML);
+
+    const nome_confirmacao = document.querySelector(".confirmacao .bebidas .nome");
+    const preco_confirmacao = document.querySelector(".confirmacao .bebidas .preco");
+
+    nome_confirmacao.innerHTML = bebida_nome;
+    preco_confirmacao.innerHTML = bebida_preco.toFixed(2);
 
     atualizarBotao();
 }
@@ -83,11 +97,37 @@ function selecionarSobremesa(opcao) {
     sobremesa_nome = nome.innerHTML;
     sobremesa_preco = Number(preco.innerHTML);
 
+    const nome_confirmacao = document.querySelector(".confirmacao .sobremesas .nome");
+    const preco_confirmacao = document.querySelector(".confirmacao .sobremesas .preco");
+
+    nome_confirmacao.innerHTML = sobremesa_nome;
+    preco_confirmacao.innerHTML = sobremesa_preco.toFixed(2);
+
     atualizarBotao();
 }
 
+function confirmarPedido() {
+    const confirmacao = document.querySelector(".confirmacao");
+    confirmacao.classList.remove("oculto");
+
+    preco_total = prato_preco + bebida_preco + sobremesa_preco;
+
+    const total_confirmacao = document.querySelector(".confirmacao .total .preco");
+    total_confirmacao.innerHTML = preco_total.toFixed(2);
+
+    const body = document.querySelector("body");
+    body.classList.add("travado");
+}
+
+function cancelar() {
+    const confirmacao = document.querySelector(".confirmacao");
+    confirmacao.classList.add("oculto");
+
+    const body = document.querySelector("body");
+    body.classList.remove("travado");
+}
+
 function enviarMensagem() {
-    const preco = prato_preco + bebida_preco + sobremesa_preco;
     const nome = prompt("Digite seu nome:");
     const endereco = prompt("Digite seu endereço:");
 
@@ -96,7 +136,7 @@ function enviarMensagem() {
     const prato = "- Prato: " + prato_nome;
     const bebida = "\n- Bebida: " + bebida_nome;
     const sobremesa = "\n- Sobremesa: " + sobremesa_nome;
-    const total = "\nTotal: R$ " + preco.toFixed(2);
+    const total = "\nTotal: R$ " + preco_total.toFixed(2);
     const nome_mensagem = "\n\nNome: " + nome;
     const endereco_mensagem = "\nEndereço: " + endereco;
 

@@ -137,7 +137,32 @@
     <!-- RODAPÉ -->
     <div class="rodape">
         <button class="desabilitado" disabled>Selecione os 3 itens para fechar o pedido</button>
-        <button class="habilitado oculto" onclick="enviarMensagem();">Fechar pedido</button>
+        <button class="habilitado oculto" onclick="confirmarPedido();">Fechar pedido</button>
+    </div>
+
+    <!-- TELA DE CONFIRMAÇÃO DE PEDIDO -->
+    <div class="confirmacao oculto">
+        <div class="caixa-confirmacao">
+            <h2>Confirme seu pedido</h2>
+            <div class="linha-confirmacao pratos">
+                <p class="nome">Prato</p>
+                <p class="preco">0</p>
+            </div>
+            <div class="linha-confirmacao bebidas">
+                <p class="nome">Bebida</p>
+                <p class="preco">0</p>
+            </div>
+            <div class="linha-confirmacao sobremesas">
+                <p class="nome">Sobremesa</p>
+                <p class="preco">0</p>
+            </div>
+            <div class="linha-confirmacao total">
+                <p>TOTAL</p>
+                <p class="preco">0</p>
+            </div>
+            <button class="fechar-pedido" onclick="enviarMensagem()">Tudo certo, pode pedir!</button>
+            <button class="cancelar" onclick="cancelar()">Cancelar</button>
+        </div>
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
